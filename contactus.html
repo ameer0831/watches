@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+.navbar .logo {
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar .menu li {
+    margin: 0 10px;
+    position: relative;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 26px;
+}
+.navbar .menu li a:hover {
+    color: #007bff;
+    padding: 2px 2px 2px 2px;
+    background-color: rgb(239, 189, 124);
+}
+.navbar .menu li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .menu li:hover .dropdown {
+    display: block;
+}
+.navbar .menu li .dropdown li {
+    padding: 5px 20px;
+}
+.navbar .menu li .dropdown li a {
+    color: #000;
+}
+.navbar .menu li .dropdown li a:hover {
+    color: blue;
+}
+.navbar .button {
+    background-color:black;
+    color: white;
+    padding: 20px 30PX 20PX 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navbar .button:hover {
+    background-color: rgb(249, 202, 141);
+}
+.main p{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+}
+.main1{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: aqua;
+}
+.marqu{
+    display: flex;
+    margin-top: 50px;
+    
+}
+.marqu h1{
+    font-size: 50px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main20 {
+    display: flex;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.box1 ion-icon {
+ 
+    color: rgb(100, 55, 37);
+    font-size: 40px;
+}
+
+.box1 h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.box1 p {
+    margin: 0;
+}
+.box2 ion-icon {
+ 
+    color: rgb(100, 55, 37);
+    font-size: 40px;
+}
+
+.box2 h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.box2 p {
+    margin: 0;
+}
+.box3 ion-icon {
+ 
+    color:rgb(100, 55, 37);
+    font-size: 40px;
+}
+
+.box3 h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.box3 p {
+    margin: 0;
+}
+.contact-form {
+    flex: 2;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form p {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+.map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.info-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.info-box h2 {
+    margin: 0;
+    font-size: 18px;
+}
+.info-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.info-box a {
+    color: #4285F4;
+    text-decoration: none;
+}
+.info-box a:hover {
+    text-decoration: underline;
+}
+.instagram-follow {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 100px;
+    }
+    
+    .instagram-follow h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .instagram-follow h2 i {
+    margin-right: 10px;
+    }
+    
+    .image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    
+    .image-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    }
+    
+    footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    }
+    
+    footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    
+    footer ul li {
+    margin: 0 15px;
+    }
+    
+    footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    }
+    
+    footer .social-icons {
+    margin-top: 20px;
+    }
+    
+    footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    }
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+          
+           WATCHS
+        </div>
+        <ul class="menu">
+            <li><a style="background-color: rgb(249, 204, 145); padding: 5px 5px 5px5px;" href="#">Home </a>
+                
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">pages<span class="dropdown-icon">&#9662;</span></a>
+            <ul class="dropdown">
+                <li><a href="home02.html">Home 2</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="contactus.html">contact us</a></li>
+                <li><a href="privacy.html">privacy policy</a></li>
+                <li><a href="404.html">404</a></li>
+            </ul>
+            </li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="blog.html">blog</a>
+                            </li>
+        </ul>
+        <div class="cart">
+            <img src="img/imgcard.png" alt="Cart">
+            </div>
+        <a href="#" class="button">GET IN TOUCH</a>
+        </div>
+    <div class="main">
+        <p>CONTACT US</p>
+    </div>
+    <div class="main1">
+        <img  src="faqs/bo7.png" style="padding-left: 30px;  width: 300px;" alt="" >
+        <img src="faqs/bo8.png" style="position: relative; left: 600px;" alt="">
+    </div>
+    <marquee>
+        <div class="marqu">
+        <h1>SMART WATCHES  <img src="watch1.png"></h1>
+        
+        <h1>SPORTS WATCHES <img src= "watch2.png"></h1>
+
+        <h1>FITNESS WATCHES <img src="watch1.png"></h1>
+        </div>
+    </marquee>
+    <div class="main20">
+        <div class="contact-info">
+            <div class="box1">
+                <h2> <ion-icon name="location-outline"></ion-icon>Address </h2>
+                <p>Australia-145 45J Street<br>Office 789 Berlik De14563</p>
+            </div>
+            <div class="box2">
+                <h2><ion-icon name="call-outline"></ion-icon> Emergency Call</h2>
+                <p>+1800 123 4567890<br>+1800 123 4567890</p>
+            </div>
+            <div class="box3">
+                <h2> <ion-icon name="mail-outline"></ion-icon>Mail Us</h2>
+                <p>hello@example.com</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Need to get in touch?</h2>
+            <p>As our home office the located in best Michigan, the best assessments that are the Michigan. The Assessments will be best virtually.</p>
+            <form>
+                <input type="text" name="first_name" placeholder="First Name">
+                <input type="text" name="last_name" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+    <div class="map">
+        <div class="info-box">
+            <h2>PeacefulQode Private Limited</h2>
+            <p>S-8 Omkar complex Eru, Abrama Rd,<br> nr. Gandhi Railway Crossing, Hansapore, Gujarat 396445</p>
+            <p><strong>Rating: 5.0 ★★★★★ (59 reviews)</strong></p>
+            <p><a href="https://goo.gl/maps/example" target="_blank">View larger map</a></p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019798116028!2d-122.0842496846818!3d37.422065779825085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba8070a7636f%3A0xe665c0bdeaa3e2d2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1632487227871!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+    <section class="instagram-follow">
+        <h2><i class="fab fa-instagram"></i> Follow on Instagram</h2>
+        <div class="image-gallery">
+            <img src="img2/2.png" alt="Watch 1">
+            <img src="img2/3.png" alt="Watch 2">
+            <img src="img2/4.png" alt="Watch 3">
+            <img src="img2/im6.png" alt="Watch 4">
+            <img src="img2/im5.png" alt="Watch 5">
+            <img src="img2/2.png" alt="Watch 6">
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="watches.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Style Guide</a></li>
+            <li><a href="#">Licenses</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+     </div>
+</body>
+</html>

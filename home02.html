@@ -5,93 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch home 02 webpage</title>
     <style>
-        body {
+        /* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
-}
+} */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    justify-content: space-between;
+    padding: 10px 20px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
 }
 .navbar .logo {
     display: flex;
+    font-size: 40px;
     align-items: center;
 }
 .navbar .logo img {
-    height: 40px;
+    height: 30px;
     margin-right: 10px;
 }
 .navbar .logo span {
     font-size: 24px;
     font-weight: bold;
+    color: #000;
 }
 .navbar .menu {
     display: flex;
-    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.navbar .menu a {
-    margin-left: 30px;
+.navbar .menu li {
+    margin: 0 10px;
+    position: relative;
+}
+.navbar .menu li a {
     text-decoration: none;
-    color: black;
-    font-size: 18px;
+    color: #000;
+    font-size: 26px;
 }
-.navbar .menu a:hover {
+.navbar .menu li a:hover {
+    color: #007bff;
+    padding: 2px 2px 2px 2px;
+    background-color: rgb(239, 189, 124);
+}
+.navbar .menu li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .menu li:hover .dropdown {
+    display: block;
+}
+.navbar .menu li .dropdown li {
+    padding: 5px 20px;
+}
+.navbar .menu li .dropdown li a {
+    color: #000;
+}
+.navbar .menu li .dropdown li a:hover {
+    color: blue;
+}
+.navbar .button {
+    background-color:black;
     color: white;
-}
-.navbar .menu .cart {
-    display: flex;
-    align-items: center;
-}
-.navbar .menu .cart img {
-    height: 24px;
-    margin-right: 5px;
-}
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.text-content {
-    max-width: 600px;
-}
-.text-content h1 {
-    font-size: 78px;
-    margin-bottom: 20px;
-    color: white;
-}
-.text-content p{
-color:whi;
-}
-.buttons {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-.button{
-    background-color: rgb(201, 183, 183);
-    padding: 10px;
-}
-.buttons .button {
-    display: flex;
-    align-items: center;
-    background-color:white;
-    color:white;
-    padding: 10px 20px;
-    border: none;
+    padding: 20px 30PX 20PX 30px;
     border-radius: 5px;
-    cursor: pointer;
-    margin-right: 20px;
     text-decoration: none;
-    font-size: 18px;
+}
+.navbar .button:hover {
+    background-color: rgb(249, 202, 141);
 }
 .main p{
     text-align: center;
@@ -380,41 +373,52 @@ section::-webkit-scrollbar-thumb {
     }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="watchhome2.css">
+    
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="watch.png" alt="Logo">
           
+           WATCHS
         </div>
-        <div class="menu">
-            <a href="watches.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="#">Pages</a>
-            <a href="#">Shop</a>
-            <a href="#">Blog</a>
-            <div class="cart">
-                <img src="edhm3.png" alt="Cart">
-                <a href="#">Sign In</a>
+        <ul class="menu">
+            <li><a style="background-color: rgb(249, 204, 145); padding: 5px 5px 5px5px;" href="#">Home </a>
+                
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">pages<span class="dropdown-icon">&#9662;</span></a>
+            <ul class="dropdown">
+                <li><a href="home02.html">Home 2</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="contactus.html">contact us</a></li>
+                <li><a href="privacy.html">privacy policy</a></li>
+                <li><a href="404.html">404</a></li>
+            </ul>
+            </li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="blog.html">blog</a>
+                            </li>
+        </ul>
+        <div class="cart">
+            <img src="img/imgcard.png" alt="Cart">
             </div>
-            <a href="#" class="button">GET IN TOUCH</a>
+        <a href="#" class="button">GET IN TOUCH</a>
         </div>
     </div>
     <div class="main">
         <p>WATCHES</p>
     </div>
     <div class="main1">
-        <img  src="man.png" alt="" >
-        <img src="women.png" alt="">
+        <img  src="abouim/man.png" width="50%" alt="" >
+        <img src="abouim/woman.png" width="50%" alt="">
     </div>
     <marquee>
         <div class="marqu">
-        <h1>SMART WATCHES  <img src="watch1.png"></h1>
+        <h1>SMART WATCHES  <img src="img/w1.png"></h1>
         
-        <h1>SPORTS WATCHES <img src= "watch2.png"></h1>
+        <h1>SPORTS WATCHES <img src= "img/m2.png"></h1>
 
-        <h1>FITNESS WATCHES <img src="watch1.png"></h1>
+        <h1>FITNESS WATCHES <img src="img/m3.png"></h1>
         </div>
     </marquee>
     <main>
@@ -424,7 +428,7 @@ section::-webkit-scrollbar-thumb {
         <div class="slide-container">
             <section class="container" id="slider">
                 <div class="thumbnail">
-                    <img src="ff1.png" height="300" width="300" alt="">
+                    <img src="img/img3.png" height="300" width="300" alt="">
                     <div class="product-details">
                         <h2>Demo product</h2>
                         <p><span>$39.99</span>$29.99</p>
@@ -432,7 +436,7 @@ section::-webkit-scrollbar-thumb {
                     </div>
                 </div>
                 <div class="thumbnail">
-                    <img src="ff3.png" height="300" width="300" alt="">
+                    <img src="img/img2.png" height="300" width="300" alt="">
                     <div class="product-details">
                         <h2>Demo product</h2>
                         <p><span>$39.99</span>$29.99</p>
@@ -440,7 +444,7 @@ section::-webkit-scrollbar-thumb {
                     </div>
                 </div>
                 <div class="thumbnail">
-                    <img src="ff4.png" height="300" width="300" alt="">
+                    <img src="img/img4.png" height="300" width="300" alt="">
                     <div class="product-details">
                         <h2>Demo product</h2>
                         <p><span>$39.99</span>$29.99</p>
@@ -453,7 +457,7 @@ section::-webkit-scrollbar-thumb {
     </main>
     <div class="main5">
         <div class="image1">
-            <img src="bo8.png" alt="Left Watch" class="image">
+            <img src="abouim/man1.png" alt="Left Watch" class="image">
         </div>
         <div class="text-container">
             <h1>OPAL CASCADE</h1>
@@ -465,12 +469,12 @@ section::-webkit-scrollbar-thumb {
             </ul>
         </div>  
         <div class="image2">
-            <img src="bo9.png" alt="Right Watch" class="image">
+            <img src="abouim/woman1.png" alt="Right Watch" class="image">
         </div>
     </div>
     <div class="main6">
         <div class="image2">
-            <img src="watch1.png" alt="Left Watch" class="image left-image">
+            <img src="abouim/woman2.png" alt="Left Watch" class="image left-image">
         </div>
         <div class="text-container">
             <h1>LIMITED OFFER</h1>
@@ -479,7 +483,7 @@ section::-webkit-scrollbar-thumb {
             <button>SHOP NOW</button>
         </div>
         <div class="image2">
-            <img src="watch2.png" alt="Right Watch" class="image right-image">
+            <img src="abouim/man2.png" alt="Right Watch" class="image right-image">
         </div>
     </div>
     <div class="main7">
@@ -496,12 +500,12 @@ section::-webkit-scrollbar-thumb {
     <section class="instagram-follow">
         <h2><i class="fab fa-instagram"></i> Follow on Instagram</h2>
         <div class="image-gallery">
-            <img src="wat1.png" alt="Watch 1">
-            <img src="wat.png" alt="Watch 2">
-            <img src="watch3.png" alt="Watch 3">
-            <img src="wat3.png" alt="Watch 4">
-            <img src="watch1.png" alt="Watch 5">
-            <img src="watch3.png" alt="Watch 6">
+            <img src="img2/2.png" alt="Watch 1">
+            <img src="img2/3.png" alt="Watch 2">
+            <img src="img2/4.png" alt="Watch 3">
+            <img src="img2/im6.png" alt="Watch 4">
+            <img src="img2/im5.png" alt="Watch 5">
+            <img src="img2/2.png" alt="Watch 6">
         </div>
     </section>
     <footer>
@@ -511,7 +515,7 @@ section::-webkit-scrollbar-thumb {
             <li><a href="#">Style Guide</a></li>
             <li><a href="#">Licenses</a></li>
             <li><a href="#">Changelog</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
         </ul>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -520,7 +524,7 @@ section::-webkit-scrollbar-thumb {
             <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-
+    
      </div>
-</body>
-</html>
+     </body>
+     </html>
